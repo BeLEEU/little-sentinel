@@ -89,6 +89,7 @@ def main():
 
     #提示信息
     print_help()
+
     while True:
         try:
             user_input = input("GitHub Sentinel> ")
