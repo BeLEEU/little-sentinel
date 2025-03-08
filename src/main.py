@@ -1,3 +1,5 @@
+import os
+
 from config import Config
 from scheduler import Scheduler
 from github_client import GitHubClient
@@ -8,7 +10,8 @@ from subscription_manager import SubscriptionManager
 
 def main():
     config = Config()
-    github_client = GitHubClient(config.github_token)
+    github_api_key = os.getenv("GITHUB_API_KEY")
+    github_client = GitHubClient(github_api_key)
     notifier = Notifier(config.notification_settings)
     report_generator = ReportGenerator()
     subscription_manager = SubscriptionManager(config.subscriptions_file)

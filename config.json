@@ -1,0 +1,9 @@
+{
+    "github_token": "your_github_token",
+    "notification_settings": {
+        "email": "your_email@example.com",
+        "feishu_url": "your_feishu_url"
+    },
+    "subscriptions_file": "../subscriptions.json",
+    "update_interval": 86400
+}
